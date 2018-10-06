@@ -1,0 +1,27 @@
+.product-single {
+    background: transparent;
+}
+
+.product-single-desc {
+    min-height: 100px;
+}
+
+.uni-sidebar {
+    display:none;
+    background: purple;
+}
+
+.uni-mobile-topbar {
+    height: 60px;
+    background: purple;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .uni-sidebar {
+        display: block;
+    }
+    .uni-mobile-topbar {
+        display: none;
+    }
+}

@@ -625,6 +625,8 @@ if ( ! function_exists('_error_handler'))
 		if (str_ireplace(array('off', 'none', 'no', 'false', 'null'), '', ini_get('display_errors')))
 		{
 			$_error->show_php_error($severity, $message, $filepath, $line);
+			save_error($severity, $message, $filepath, $line);
+
 		}
 
 		// If the error is fatal, the execution of the script should be stopped because
@@ -849,5 +851,17 @@ if ( ! function_exists('function_usable'))
 		}
 
 		return FALSE;
+	}
+}
+
+
+if ( ! function_exists('save_error'))
+{
+	function save_error($severity, $message, $filepath, $line)
+	{
+		$ci =& get_instance();
+		$ci->load->model('error_model', 'error');
+		$backtrace = debug_backtrace();
+		$ci->error->save($severity, $message, $filepath, $line, $backtrace);
 	}
 }
