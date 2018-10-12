@@ -1,4 +1,4 @@
-angular.module('products', ['rzModule'])
+angular.module('unicorn', ['rzModule'])
     .service('productsService', ['$log', '$http', '$q', function ($log, $http, $q) {
         var vm = this;
         

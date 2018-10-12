@@ -1,5 +1,5 @@
 
-<div class="container-fluid" ng-app="products" ng-controller="productsController as pCtrl">
+<div class="container-fluid" ng-app="unicorn" ng-controller="productsController as pCtrl">
 	<div class="row">
 		<div class="uni-mobile-topbar">
 			<span>Filter options go here</span>

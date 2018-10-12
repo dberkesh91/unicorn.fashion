@@ -19,8 +19,11 @@
       </li> -->
       <?php foreach ($categories as $category) { ?>
         <li class="nav-item active">
-        <a class="nav-link" href="#"><?= $category['name'] ?><span class="sr-only">(current)</span></a>
-      </li>
+          <a class="nav-link" href="#"><?= $category['name'] ?>
+            <span class="sr-only">(current)</span>
+            <?php if ($category['name'] == 'Korpa') { echo '(<span id="bag-items-count">0</span>)';} ?>
+          </a>
+        </li>
       <?php } ?>  
     </ul>
   </div>

@@ -13,6 +13,7 @@ class Products extends MY_Controller
     {
         $data['categories'] = $this->_categories;
         $data['content'] = $this->load->view('products', '', true);
+        $data['bagCount'] = $this->_bagCount;
 
         addCss(array(
             'css/home.css',
@@ -22,7 +23,7 @@ class Products extends MY_Controller
 
         addJs(array(
             'js/libraries/angular/angular.min.js',
-            'js/rzslider.js',
+            'js/libraries/rzslider/rzslider.min.js',
             'js/app.js'
         ));
 

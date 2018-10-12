@@ -1,10 +1,20 @@
 <head>
 	<?php $this->load->view('common/head'); ?>
 </head>
+
 <body>
+
+	<!-- Load Common Header -->
 	<?php $this->load->view('common/header'); ?>
+	<!-- Load Common Header -->
+
+	<!-- Load Page Specific Content -->
 	<?= $content ?>
+	<!-- Load Page Specific Content -->
+
+	<!-- Load Common Footer -->
 	<?php $this->load->view('common/footer'); ?>
+	<!-- Load Common Footer -->
 
 	<!-- Load javascript at bottom of the page for performance -->
 	<script

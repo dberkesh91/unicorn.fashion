@@ -3,6 +3,8 @@
 class MY_Controller extends CI_Controller
 {
     protected $_categories;
+    protected $_bagCount;
+
     public function __construct()
     {
 		parent::__construct();
@@ -18,6 +20,7 @@ class MY_Controller extends CI_Controller
         /**
 		 * Get main navigation items displayed in the shared header.
 		 */	 
-		$this->_categories = $this->categories->getAll();
+        $this->_categories = $this->categories->getAll();
+        $this->_bagCount = 0;
     }
 }

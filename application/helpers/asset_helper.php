@@ -77,7 +77,7 @@ if(!function_exists('putCss')){
         if ($header_css)
         {
             foreach($header_css AS $item){
-                $str .= '<link rel="stylesheet" href="assets/'.$item.'" type="text/css" />'."\n";
+                $str .= '<link rel="stylesheet" href="' . SITE_HOST . '/assets/'. $item. '" type="text/css" />'."\n";
             }
         }
         return $str;
@@ -94,7 +94,7 @@ if(!function_exists('putJs')){
         if ($header_js)
         {
             foreach($header_js AS $item){
-                $str .= '<script type="text/javascript" src="assets/'.$item.'"></script>'."\n";
+                $str .= '<script type="text/javascript" src="' . SITE_HOST . '/assets/' .$item. '"></script>'."\n";
             }
         }
         return $str;

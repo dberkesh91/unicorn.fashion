@@ -25,10 +25,17 @@ class Home extends MY_Controller {
 		/**
 		 * Load page specific css and js.
 		 */
-		addCss(array('css/home.css'));
-		addJs(array('js/home.js'));
+		addCss(array(
+			'css/home.css'
+		));
+		addJs(array(
+			'js/home.js',
+			'js/cookie.js',
+			'js/tempCart.js'
+		));
 		
 		$data['categories'] = $this->_categories;
+		$data['bagCount'] = $this->_bagCount;
 		/**
 		 * Content that should go into the main template.
 		 */
